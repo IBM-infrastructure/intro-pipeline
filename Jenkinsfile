@@ -9,5 +9,10 @@ pipeline {
         sh 'java -version'
       }
     }
+    stage('Say Something') {
+      steps {
+        echo 'Something'
+      }
+    }
   }
 }

@@ -14,5 +14,13 @@ pipeline {
         echo 'Something'
       }
     }
+    stage('Say Name') {
+      steps {
+        sh 'echo "${MY_NAME}, you\'re learning!"'
+      }
+    }
+  }
+  environment {
+    MY_NAME = 'STEVE'
   }
 }

@@ -20,7 +20,7 @@ echo "${TEST_USER_PSW}"'''
       steps {
         sh '''echo "${MY_NAME}, you\'re learning!"
 
-echo "Hello ${params.Name}!"'''
+echo "Hello ${params.name}!"'''
       }
     }
   }

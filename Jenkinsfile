@@ -19,8 +19,7 @@ echo "${TEST_USER_PSW}"'''
     stage('Say Name') {
       steps {
         sh '''echo "${MY_NAME}, you\'re learning!"
-
-echo "Hello ${params.Name}!"'''
+'''
       }
     }
   }

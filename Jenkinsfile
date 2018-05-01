@@ -18,12 +18,17 @@ echo "${TEST_USER_PSW}"'''
     }
     stage('Say Name') {
       steps {
-        sh 'echo "${MY_NAME}, you\'re learning!"'
+        sh '''echo "${MY_NAME}, you\'re learning!"
+
+echo "Hello ${params.Name}!"'''
       }
     }
   }
   environment {
     MY_NAME = 'STEVE'
     TEST_USER = credentials('test-user')
+  }
+  parameters {
+    string(name: 'Name', defaultValue: 'whoever you are', description: 'Who should I say hi to?')
   }
 }
